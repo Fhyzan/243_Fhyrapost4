@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Kewarganegaraan"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textColor="#0D47A1"
+            android:textStyle="bold" />
+
+        <!-- Nama -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNama"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Nama Lengkap">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0D47A1"
+                android:inputType="textPersonName|textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NIK -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNik"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="NIK (Nomor Induk Kependudukan)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0D47A1"
+                android:inputType="number"
+                android:maxLength="16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Kabupaten -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutKabupaten"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Kabupaten">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etKabupaten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0D47A1"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Kecamatan -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutKecamatan"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Kecamatan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etKecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0D47A1"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Desa / Kelurahan -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDesa"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Desa / Kelurahan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0D47A1"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RT / RW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutRt"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="RT">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0D47A1"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutRw"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="RW">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0D47A1"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Jenis Kelamin -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Jenis Kelamin"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="#0D47A1" />
+
+        <RadioGroup
+            android:id="@+id/rgJenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-Laki"
+                android:textColor="#0D47A1" />
+
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"
+                android:textColor="#0D47A1" />
+        </RadioGroup>
+
+        <!-- Status Pernikahan -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutStatus"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Status Pernikahan">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0D47A1"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tombol -->
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingVertical="12dp"
+            android:text="Simpan Data"
+            android:backgroundTint="#64B5F6"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Reset Semua Data"
+            android:backgroundTint="#F48FB1"
+            android:textColor="#FFFFFF" />
+
+        <!-- Daftar Warga -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Daftar Warga Negara:"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textStyle="bold"
+            android:textColor="#0D47A1" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Belum ada data warga tersimpan nihh"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="#0D47A1"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvWarga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_warga" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
